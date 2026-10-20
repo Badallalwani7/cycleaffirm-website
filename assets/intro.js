@@ -146,7 +146,11 @@
     intro.querySelector('[data-done-lead]').textContent = r.via === 'email' ? 'Almost there,' : 'You’re on the list,';
     intro.querySelector('[data-done-text]').textContent = r.via === 'email'
       ? 'Your email app should open now. Hit send and you’re on the list. Until then, come look around.'
-      : (r.already ? 'You were already on it, so you’re all set. Come look around.' : 'We’ll email you when your invite’s ready. Until then, come look around.');
+      : intro.querySelector('.join-steps')
+        ? 'Two quick taps on your Android phone and the beta is yours:'
+        : (r.already ? 'You were already on it, so you’re all set. Come look around.' : 'We’ll email you when your invite’s ready. Until then, come look around.');
+    const enter = intro.querySelector('[data-intro-enter]');
+    if (intro.querySelector('.join-steps')) { enter.className = 'intro-link'; enter.textContent = 'Or look around the site first'; }
     count.textContent = 'Saved';
     intro.dataset.done = '';
     const step = stepNamed('done');

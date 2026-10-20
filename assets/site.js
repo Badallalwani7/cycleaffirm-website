@@ -194,7 +194,9 @@
       done.querySelector('[data-done-lead]').textContent = r.via === 'email' ? 'Almost there,' : 'You’re on the list,';
       done.querySelector('[data-done-text]').textContent = r.via === 'email'
         ? 'Your email app should open now. Hit send and you’re on the list.'
-        : (r.already ? 'You were already on it. We’ll email you when your invite’s ready.' : 'We’ll email you when your invite’s ready.');
+        : done.querySelector('.join-steps')
+          ? 'Two quick taps on your Android phone and the beta is yours:'
+          : (r.already ? 'You were already on it. We’ll email you when your invite’s ready.' : 'We’ll email you when your invite’s ready.');
       [...form.children].forEach((el) => { if (el !== done) el.hidden = true; });
       done.hidden = false;
     });

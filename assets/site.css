@@ -437,6 +437,12 @@ section { position: relative; }
 .hero-quiz svg { width: 1.1em; height: 1.1em; fill: var(--rose); transition: transform .6s var(--spring); }
 .hero-quiz:hover svg { transform: rotate(90deg) scale(1.15); }
 
+.join-steps { list-style: none; display: grid; gap: 14px; margin: 4px 0 18px; padding: 0; text-align: left; }
+.join-steps li { display: grid; gap: 6px; justify-items: start; }
+.join-steps span { font-size: .875rem; color: var(--muted); }
+[data-step="done"] .join-steps { justify-items: center; text-align: center; }
+[data-step="done"] .join-steps li { justify-items: center; }
+
 /* The bloom quiz: shown once, before the site */
 html.show-intro { overflow: hidden; }
 .intro { position: fixed; inset: 0; z-index: 100; display: none; overflow-y: auto; overscroll-behavior: contain; padding: max(16px, env(safe-area-inset-top)) 16px max(16px, env(safe-area-inset-bottom)); background: radial-gradient(90% 70% at 12% 0%, #F8D6E0, transparent 62%), radial-gradient(80% 70% at 100% 100%, #E6DCFA, transparent 60%), radial-gradient(60% 50% at 90% 10%, #FDE7CF, transparent 60%), #FFF5F3; --bp: #F2A9BB; --bi: var(--men-ink); }
