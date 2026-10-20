@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self' https://badallalwani7.github.io/cycleaffirm-website/; form-action 'self' mailto:">
+<meta name="referrer" content="no-referrer">
+<title>CycleAffirm: period tracker with affirmations for your phase</title>
+<meta name="description" content="A period tracker and an affirmation app in one. Get one line a day matched to your phase and how you actually feel. Invite-only Android beta, 18+. No ads.">
+<link rel="canonical" href="https://badallalwani7.github.io/cycleaffirm-website/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#FFF5F3">
+<meta name="color-scheme" content="light">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CycleAffirm">
+<meta property="og:title" content="CycleAffirm: track your cycle, tune your mind">
+<meta property="og:description" content="A period tracker and an affirmation app in one. Get one line a day matched to your phase and how you actually feel. Invite-only Android beta, 18+. No ads.">
+<meta property="og:url" content="https://badallalwani7.github.io/cycleaffirm-website/">
+<meta property="og:image" content="https://badallalwani7.github.io/cycleaffirm-website/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CycleAffirm: track your cycle, tune your mind. A four-petal flower in the four phase colours.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="./assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="./site.webmanifest">
+<link rel="preload" href="./assets/fonts/InstrumentSerif-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/InstrumentSerif-Italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./assets/site.css?v=01a12ae09d">
+<script src="./assets/site.js?v=01a12ae09d" defer></script>
+</head>
+<body class="home" data-tint="neutral">
+<a class="skip" href="#main">Skip to content</a>
+<div class="backdrop" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="header-pill">
+    <a class="brand" href="./" aria-label="CycleAffirm, home">
+      <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#mark-tile"></use></svg>
+      <span class="brand-name">CycleAffirm</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="./#how">How it works</a>
+      <a href="./#try">Try it</a>
+      <a href="./#partners">For your person</a>
+      <a href="./#privacy">Privacy</a>
+    </nav>
+    <a class="btn btn-rose btn-sm" href="./beta/">Get an invite</a>
+  </div>
+  <svg width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <radialGradient id="mark-bg" cx="30%" cy="22%" r="85%">
+        <stop offset="0" stop-color="#62304A"/>
+        <stop offset=".55" stop-color="#45202F"/>
+        <stop offset="1" stop-color="#2E1520"/>
+      </radialGradient>
+      <symbol id="mark-petals" viewBox="0 0 100 100">
+        <ellipse cx="50" cy="37" rx="9.6" ry="14.3" fill="#fff" fill-opacity=".55" transform="rotate(-45 50 50)"/>
+        <ellipse cx="50" cy="37" rx="9.6" ry="14.3" fill="#fff" fill-opacity=".67" transform="rotate(45 50 50)"/>
+        <ellipse cx="50" cy="37" rx="9.6" ry="14.3" fill="#fff" fill-opacity=".79" transform="rotate(135 50 50)"/>
+        <ellipse cx="50" cy="37" rx="9.6" ry="14.3" fill="#fff" fill-opacity=".91" transform="rotate(225 50 50)"/>
+        <circle cx="50" cy="50" r="5" fill="#fff"/>
+      </symbol>
+      <symbol id="mark-tile" viewBox="0 0 100 100">
+        <rect width="100" height="100" rx="24" fill="url(#mark-bg)"/>
+        <use href="#mark-petals"/>
+      </symbol>
+      <symbol id="bloom" viewBox="0 0 100 100">
+        <ellipse cx="50" cy="31" rx="15" ry="22" transform="rotate(45 50 50)"/>
+        <ellipse cx="50" cy="31" rx="15" ry="22" transform="rotate(135 50 50)"/>
+        <ellipse cx="50" cy="31" rx="15" ry="22" transform="rotate(225 50 50)"/>
+        <ellipse cx="50" cy="31" rx="15" ry="22" transform="rotate(315 50 50)"/>
+      </symbol>
+    </defs>
+  </svg>
+</header>
+
+<main id="main">
+<section class="hero" data-hero data-active="lut" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="sticker sticker--tilt"><svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#bloom"></use></svg>Invite-only beta · Android · 18+</p>
+      <h1 id="hero-title" class="display h1">Track your cycle.<br><em class="squiggle">Tune your mind.<svg viewBox="0 0 300 18" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M3 12 C 40 3, 80 17, 120 9 S 190 3, 230 10 S 280 12, 297 6"/></svg></em></h1>
+      <p class="lede">CycleAffirm is a period tracker and an affirmation app in one. It knows which phase you're in, asks how you're actually feeling, and gives you one line a day that fits both. Like a bestie who gets it.</p>
+      <div class="actions">
+        <a class="btn btn-rose" href="./beta/">Get an invite</a>
+        <a class="btn btn-ghost" href="#try">Try a check-in</a>
+      </div>
+    </div>
+
+    <div class="hero-art">
+      <div class="bloom bloom--hero" aria-hidden="true">
+        <svg viewBox="0 0 200 200" focusable="false">
+          <g class="bloom-spin">
+            <g class="petal petal--men" transform="rotate(45 100 100)"><ellipse cx="100" cy="64" rx="34" ry="48"/></g>
+            <g class="petal petal--fol" transform="rotate(135 100 100)"><ellipse cx="100" cy="64" rx="34" ry="48"/></g>
+            <g class="petal petal--ovu" transform="rotate(225 100 100)"><ellipse cx="100" cy="64" rx="34" ry="48"/></g>
+            <g class="petal petal--lut" transform="rotate(315 100 100)"><ellipse cx="100" cy="64" rx="34" ry="48"/></g>
+            <circle class="bloom-heart" cx="100" cy="100" r="14"/>
+            <circle class="bloom-dot" cx="100" cy="100" r="4.5"/>
+          </g>
+        </svg>
+      </div>
+      <figure class="hero-card">
+        <p class="hero-card-label"><span class="pdot"></span><span data-hero-phase>Luteal</span> · today's line</p>
+        <blockquote class="hero-card-text" data-hero-line>Extra sensitive is just feelings in 4K. Nothing's wrong with you.</blockquote>
+        <figcaption>From the app's library, matched to the phase</figcaption>
+        <button class="pause" type="button" data-pause aria-pressed="false">Pause</button>
+      </figure>
+      <img class="hero-buddy" src="./assets/img/comp_bunny_happy.webp" width="160" height="160" alt="">
+      <p class="sticker sticker--est" aria-hidden="true">predictions are estimates</p>
+    </div>
+  </div>
+</section>
+
+<div class="ribbon">
+  <div class="ribbon-track">
+    <ul class="ribbon-list" aria-label="A few lines from the app">
+      <li>Low battery mode is a feature, not a bug.</li>
+      <li>Main character energy is loading... and it's you.</li>
+      <li>Take the compliment. Do not argue with it.</li>
+      <li>Protect your peace like it's your phone at 2%.</li>
+      <li>Soft era activated. No notes.</li>
+      <li>Curiosity is your cheat code this week.</li>
+      <li>Comparison is a thief. Don't give it your password.</li>
+      <li>You are not your worst thought at 2am.</li>
+      <li>Rest is productive. Ask literally any phone charger.</li>
+      <li>Your ideas deserve airtime. Unmute yourself.</li>
+      <li>Cozy, quiet, and slow is a perfectly elite plan.</li>
+    </ul>
+    <ul class="ribbon-list" aria-hidden="true">
+      <li>Low battery mode is a feature, not a bug.</li>
+      <li>Main character energy is loading... and it's you.</li>
+      <li>Take the compliment. Do not argue with it.</li>
+      <li>Protect your peace like it's your phone at 2%.</li>
+      <li>Soft era activated. No notes.</li>
+      <li>Curiosity is your cheat code this week.</li>
+      <li>Comparison is a thief. Don't give it your password.</li>
+      <li>You are not your worst thought at 2am.</li>
+      <li>Rest is productive. Ask literally any phone charger.</li>
+      <li>Your ideas deserve airtime. Unmute yourself.</li>
+      <li>Cozy, quiet, and slow is a perfectly elite plan.</li>
+    </ul>
+  </div>
+  <button class="ribbon-pause" type="button" data-ribbon-pause aria-pressed="false">Pause</button>
+</div>
+
+<section id="how" class="how" aria-labelledby="how-title">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="eyebrow">How it works</p>
+      <h2 id="how-title" class="display h2">Four phases, four moods. <em>One line a day that gets it.</em></h2>
+    </header>
+
+    <div class="track">
+      <figure class="polaroid polaroid--ring">
+        <img src="./assets/img/ring_crop.webp" width="640" height="828" loading="lazy" alt="The cycle ring in the app: luteal, day 24, about 6 days left of luteal. Below it: Period in about 6 days, Day 24 of 29, and the note: Estimates only. Not birth control or medical advice.">
+        <figcaption>your ring, estimates included</figcaption>
+      </figure>
+      <ol class="track-steps">
+        <li>
+          <h3>Log your period</h3>
+          <p>Tap “Period started?” when it does. CycleAffirm works out your phase and day and shows them on a ring.</p>
+        </li>
+        <li>
+          <h3>See what's coming</h3>
+          <p>“Period in about 6 days.” Every prediction is labelled an estimate, and it learns your real cycle length as you log.</p>
+        </li>
+        <li>
+          <h3>Get a line for the phase</h3>
+          <p>Each morning there's an affirmation written for where you are, in the voice of a friend who's funny about it and kind about it.</p>
+        </li>
+      </ol>
+    </div>
+
+    <div class="journey">
+      <div class="journey-bloom" aria-hidden="true">
+        <div class="bloom bloom--journey" data-active="men">
+          <svg viewBox="0 0 200 200" focusable="false">
+            <g class="bloom-turn">
+              <g class="petal petal--men" transform="rotate(45 100 100)"><ellipse cx="100" cy="64" rx="34" ry="48"/></g>
+              <g class="petal petal--fol" transform="rotate(135 100 100)"><ellipse cx="100" cy="64" rx="34" ry="48"/></g>
+              <g class="petal petal--ovu" transform="rotate(225 100 100)"><ellipse cx="100" cy="64" rx="34" ry="48"/></g>
+              <g class="petal petal--lut" transform="rotate(315 100 100)"><ellipse cx="100" cy="64" rx="34" ry="48"/></g>
+              <circle class="bloom-heart" cx="100" cy="100" r="14"/>
+              <circle class="bloom-dot" cx="100" cy="100" r="4.5"/>
+            </g>
+          </svg>
+          <p class="bloom-label"><span data-for="men">Menstrual · around day 3</span><span data-for="fol">Follicular · around day 9</span><span data-for="ovu">Ovulatory · around day 14</span><span data-for="lut">Luteal · around day 23</span></p>
+        </div>
+      </div>
+
+      <ol class="phases">
+        <li class="phase" data-phase="men">
+          <p class="phase-tag">Menstrual <span>around days 1–5</span></p>
+          <p class="phase-feel">Often feels like: a time to rest and turn inward.</p>
+          <blockquote class="phase-line"><p>Low battery mode is a feature, not a bug.</p></blockquote>
+          <p class="phase-meta">From the app's library, for tired and overwhelmed days</p>
+        </li>
+        <li class="phase" data-phase="fol">
+          <p class="phase-tag">Follicular <span>around days 6–12</span></p>
+          <p class="phase-feel">Often feels like: energy is building, fresh starts feel easier.</p>
+          <blockquote class="phase-line"><p>New era unlocked. Start the thing.</p></blockquote>
+          <p class="phase-meta">From the app's library, for hopeful, energised days</p>
+        </li>
+        <li class="phase" data-phase="ovu">
+          <p class="phase-tag">Ovulatory <span>around days 13–16</span></p>
+          <p class="phase-feel">Often feels like: peak energy and confidence.</p>
+          <blockquote class="phase-line"><p>Take the compliment. Do not argue with it.</p></blockquote>
+          <p class="phase-meta">From the app's library, for confident and insecure days alike</p>
+        </li>
+        <li class="phase" data-phase="lut">
+          <p class="phase-tag">Luteal <span>around days 17–28</span></p>
+          <p class="phase-feel">Often feels like: slowing down, feelings run deeper.</p>
+          <blockquote class="phase-line"><p>Protect your peace like it's your phone at 2%.</p></blockquote>
+          <p class="phase-meta">From the app's library, for tired, irritable, overwhelmed days</p>
+        </li>
+      </ol>
+    </div>
+    <p class="fine how-fine">Days shown for a 28-day cycle. CycleAffirm fits the phases to your own cycle, and every prediction is an estimate. Not birth control or medical advice.</p>
+  </div>
+</section>
+
+<section id="try" class="try" aria-labelledby="try-title">
+  <div class="wrap try-grid">
+    <div class="try-copy">
+      <p class="eyebrow">Try a check-in</p>
+      <h2 id="try-title" class="display h2">How are you, <em>really?</em></h2>
+      <p class="lede">In the app, a check-in takes seconds. Tell it how you actually feel and today's line changes to match you, not just the day of your cycle. Try the mood part here.</p>
+      <ul class="points">
+        <li><strong>A few sliders, a few words.</strong> Energy, mood, sleep, calm, body and self-worth, the moods that fit, and a note if you want one.</li>
+        <li><strong>A line that fits.</strong> You get a balance score and the best line for your phase and mood. Add a note, or have a really low day, and the AI writes you a fresh one, if you've said yes to AI.</li>
+        <li><strong>It learns what helps.</strong> Check in a few times and, when a phase ends, it remembers what worked, so that phase's lines fit better next cycle.</li>
+      </ul>
+      <figure class="polaroid polaroid--ci">
+        <img src="./assets/img/ci_card.webp" width="640" height="864" loading="lazy" alt="The check-in summary in the app: a balance score of 33, Go gently, and bars for energy, mood, sleep, calm, body and self-worth.">
+        <figcaption>the real check-in</figcaption>
+      </figure>
+    </div>
+
+    <form class="demo" data-demo data-phase="lut" aria-labelledby="try-title">
+      <fieldset>
+        <legend>Where are you in your cycle?</legend>
+        <div class="chips">
+          <label class="chip chip--men"><input type="radio" name="phase" value="menstrual"><span>Menstrual</span></label>
+          <label class="chip chip--fol"><input type="radio" name="phase" value="follicular"><span>Follicular</span></label>
+          <label class="chip chip--ovu"><input type="radio" name="phase" value="ovulatory"><span>Ovulatory</span></label>
+          <label class="chip chip--lut"><input type="radio" name="phase" value="luteal" checked><span>Luteal</span></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>How do you feel? <span>Pick up to 3</span></legend>
+        <div class="chips">
+          <label class="chip"><input type="checkbox" name="mood" value="tired"><span>Tired</span></label>
+          <label class="chip"><input type="checkbox" name="mood" value="anxious"><span>Anxious</span></label>
+          <label class="chip"><input type="checkbox" name="mood" value="sad"><span>Low</span></label>
+          <label class="chip"><input type="checkbox" name="mood" value="irritable"><span>Irritable</span></label>
+          <label class="chip"><input type="checkbox" name="mood" value="overwhelmed"><span>Overwhelmed</span></label>
+          <label class="chip"><input type="checkbox" name="mood" value="in_pain"><span>In pain</span></label>
+          <label class="chip"><input type="checkbox" name="mood" value="calm"><span>Calm</span></label>
+          <label class="chip"><input type="checkbox" name="mood" value="hopeful"><span>Hopeful</span></label>
+          <label class="chip"><input type="checkbox" name="mood" value="energized"><span>Energized</span></label>
+          <label class="chip"><input type="checkbox" name="mood" value="confident"><span>Confident</span></label>
+          <label class="chip"><input type="checkbox" name="mood" value="social"><span>Social</span></label>
+          <label class="chip"><input type="checkbox" name="mood" value="creative"><span>Creative</span></label>
+          <label class="chip"><input type="checkbox" name="mood" value="insecure"><span>Insecure</span></label>
+          <label class="chip"><input type="checkbox" name="mood" value="lonely"><span>Lonely</span></label>
+        </div>
+      </fieldset>
+      <div class="demo-result" aria-live="polite">
+        <p class="demo-label" data-demo-meta>Luteal · pick a mood or two</p>
+        <p class="demo-line" data-demo-line>Protect your peace like it's your phone at 2%.</p>
+        <button class="btn btn-ghost btn-sm" type="button" data-demo-next>Another one</button>
+      </div>
+      <p class="fine demo-fine">Lines from the app's own library. Nothing you tap here leaves this page.</p>
+      <script type="application/json" id="lines">{"menstrual":[{"t":"Low battery mode is a feature, not a bug.","m":["tired","overwhelmed"]},{"t":"Cancel the plans, keep the snacks. You're doing amazing, honestly.","m":["tired","irritable"]},{"t":"Today's to-do list: be soft with yourself. That's it. That's the list.","m":["overwhelmed","sad","tired"]},{"t":"Cramps are loud. You're louder. And also fully allowed to nap.","m":["in_pain","tired"]},{"t":"Not every day needs a comeback arc. Some days just need a blanket.","m":["sad","tired","calm"]},{"t":"Rest is productive. Ask literally any phone charger.","m":["tired","anxious"]},{"t":"Your feelings aren't too much. They're just in high definition today.","m":["sad","irritable","anxious"]},{"t":"Saying no without a paragraph of explanation? Iconic behavior.","m":["irritable","overwhelmed"]},{"t":"Heating pad, comfort show, zero guilt. This is self-care, not slacking.","m":["in_pain","tired","calm"]},{"t":"You're not behind. You're on period time, and period time is valid.","m":["anxious","overwhelmed"]},{"t":"Soft era activated. No notes.","m":["calm","tired"]},{"t":"Your body is literally doing a reset. Let it cook.","m":["calm","hopeful","in_pain"]},{"t":"Feeling lonely is real. So is this: you're not alone in it.","m":["lonely","sad"]},{"t":"Being kind to yourself today is the main quest. Everything else is a side quest.","m":["insecure","sad","overwhelmed"]}],"follicular":[{"t":"New era unlocked. Start the thing.","m":["energized","hopeful"]},{"t":"Your brain just got a software update. Go use it.","m":["creative","energized"]},{"t":"Main character energy is loading... and it's you.","m":["confident","hopeful"]},{"t":"That idea that scares you a little? That's the good kind of scary.","m":["anxious","creative"]},{"t":"Small steps still count. Nobody speedruns their whole life.","m":["tired","overwhelmed","anxious"]},{"t":"Plot twist: you're allowed to want more for yourself.","m":["confident","hopeful"]},{"t":"You don't need a perfect plan. You need a first step and good snacks.","m":["anxious","overwhelmed"]},{"t":"Fresh start energy is real. Spend it on something you love.","m":["hopeful","energized"]},{"t":"Being a beginner is not cringe. It's how every legend started.","m":["insecure","creative"]},{"t":"Your vibe is coming back online. We missed her.","m":["hopeful","calm","sad"]},{"t":"Say yes to the plan. Your social battery is finally charged.","m":["social","energized"]},{"t":"You're allowed to be proud of tiny wins. Screenshot them mentally.","m":["hopeful","insecure"]},{"t":"Curiosity is your cheat code this week.","m":["creative","energized"]},{"t":"Still tired? Fair. The upswing can load slowly.","m":["tired","sad"]}],"ovulatory":[{"t":"You're not too much. You're the whole vibe.","m":["confident","insecure"]},{"t":"Walk in like you own the room. You kind of do.","m":["confident","social"]},{"t":"It's giving unstoppable.","m":["energized","confident"]},{"t":"Take the compliment. Do not argue with it.","m":["insecure","confident"]},{"t":"Say the thing you've been drafting in your head. Hit send.","m":["confident","anxious"]},{"t":"Your energy is a whole main event today. Enjoy the spotlight.","m":["social","energized"]},{"t":"Your ideas are louder today. Say the bold one out loud.","m":["confident","hopeful"]},{"t":"You don't have to shrink to fit anyone's group chat.","m":["irritable","insecure"]},{"t":"Being seen is scary and also kind of your thing. Go.","m":["anxious","confident"]},{"t":"Restless? That's just big energy looking for a job. Give it one.","m":["anxious","energized"]},{"t":"Ask for what you want. Worst case, you get practice.","m":["confident","anxious"]},{"t":"You can be the life of the party and still leave early. Both are valid.","m":["social","tired"]},{"t":"Your ideas deserve airtime. Unmute yourself.","m":["creative","confident"]},{"t":"Comparison is a thief. Don't give it your password.","m":["insecure","sad"]}],"luteal":[{"t":"Extra sensitive is just feelings in 4K. Nothing's wrong with you.","m":["sad","irritable","anxious"]},{"t":"Not every feeling is a verdict. Some are just passing weather.","m":["anxious","overwhelmed"]},{"t":"Protect your peace like it's your phone at 2%.","m":["tired","irritable","overwhelmed"]},{"t":"You're not falling apart. You're in your feelings era, and that's allowed.","m":["sad","overwhelmed"]},{"t":"Your inner critic is not a reliable narrator. Skip that episode.","m":["insecure","sad","anxious"]},{"t":"Do less, but make it cozy.","m":["tired","calm"]},{"t":"Annoyed by everything? Your body's asking for a break, not a fight.","m":["irritable"]},{"t":"Breathe in for four, out for six. You're safe. The group chat can wait.","m":["anxious","overwhelmed"]},{"t":"Overthinking? Name one thing you can control and let the rest go.","m":["anxious"]},{"t":"You are not your worst thought at 2am.","m":["sad","anxious","insecure"]},{"t":"Your intuition is extra sharp right now. Trust the side-eye.","m":["calm","irritable"]},{"t":"This mood is a season, not your whole personality.","m":["sad","insecure"]},{"t":"Cozy, quiet, and slow is a perfectly elite plan.","m":["tired","calm","in_pain"]},{"t":"Feeling insecure doesn't make it true. You're still that person.","m":["insecure","lonely"]}]}</script>
+    </form>
+  </div>
+</section>
+
+<section id="partners" class="partners night" aria-labelledby="partners-title">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="eyebrow eyebrow--night">Optional · for your person</p>
+      <h2 id="partners-title" class="display h2">Let your person in on it. <em>You pick what they see.</em></h2>
+      <p class="lede">Invite your partner and they get a heads-up on your phase, gentle ideas for showing up, and a nudge to tell you something nice. Nothing is shared until you make the invite.</p>
+    </header>
+
+    <ol class="steps">
+      <li class="step">
+        <div class="step-art step-art--photo">
+          <figure class="polaroid polaroid--step">
+            <img src="./assets/img/invite_crop.webp" width="640" height="797" loading="lazy" alt="The Add someone sheet in the app: choose My partner or Family or a friend, switches to share how each phase usually feels and your daily moods, both off, and a Create invite code button.">
+          </figure>
+        </div>
+        <p class="step-n">01</p>
+        <h3>You make the invite</h3>
+        <p>Create an 8-character code and pick what they see: your phase and when your period's due, plus, only if you switch them on, how each phase usually feels and your daily moods. Never your notes.</p>
+      </li>
+      <li class="step">
+        <div class="step-art step-art--tip">
+          <div class="mini-today">
+            <p class="mini-kicker">Supporting her</p>
+            <p class="mini-phase"><span class="pdot pdot--lut"></span>Luteal · Slowing down. Feelings run deeper.</p>
+          </div>
+          <div class="tip">
+            <img class="tip-buddy" src="./assets/img/comp_puppy_happy.webp" width="160" height="160" alt="" loading="lazy">
+            <p>She's feeling insecure today. Reply a bit faster than usual and keep it warm.</p>
+          </div>
+        </div>
+        <p class="step-n">02</p>
+        <h3>They get gentle tips</h3>
+        <p>Plain, practical ideas for the phase you're in, as often as they like: every morning, in the evening, only on turning-point days, weekly, or not at all. Lock-screen wording never mentions your cycle.</p>
+      </li>
+      <li class="step">
+        <div class="step-art step-art--clock">
+          <p class="clock">7:30 <span>pm</span></p>
+          <div class="notif">
+            <svg class="notif-icon" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#mark-tile"></use></svg>
+            <div>
+              <p class="notif-app">CycleAffirm</p>
+              <p class="notif-title">A note for her?</p>
+              <p class="notif-body">Write her a few words that make her feel good about herself. One line is plenty.</p>
+            </div>
+          </div>
+        </div>
+        <p class="step-n">03</p>
+        <h3>A 7:30 pm nudge to write you a note</h3>
+        <p>With ideas to start from if they're stuck. They can move the time or switch it off.</p>
+      </li>
+      <li class="step">
+        <div class="step-art step-art--widget">
+          <div class="widget">
+            <img class="widget-buddy" src="./assets/img/comp_bunny_happy.webp" width="160" height="160" alt="" loading="lazy">
+            <div>
+              <p class="widget-from">From your partner</p>
+              <p class="widget-note">You don't have to be okay today to be my favourite person. Dinner's on me tonight.</p>
+            </div>
+          </div>
+          <p class="widget-cap">on your home screen</p>
+        </div>
+        <p class="step-n">04</p>
+        <h3>It lands on your home screen</h3>
+        <p>Their note shows on your Today screen, and on your home-screen widget if you've added it. Hide it, report it, or remove and block them anytime.</p>
+      </li>
+    </ol>
+    <p class="partners-fine">Family and friends can join too. They see your phase, never when your period's due. Remove anyone and they lose access straight away.</p>
+  </div>
+</section>
+
+<section id="privacy" class="privacy" aria-labelledby="privacy-title">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="eyebrow">Pinky promises</p>
+      <h2 id="privacy-title" class="display h2">Your cycle is not <em>our business model.</em></h2>
+      <p class="lede">Period data is personal. Here's the short version. The privacy policy has every detail.</p>
+    </header>
+    <ul class="promises">
+      <li>
+        <h3>Stored with Firebase</h3>
+        <p>Your data lives in Google's Firebase, behind rules that let only you read it. People you invite see only what you chose to share.</p>
+      </li>
+      <li>
+        <h3>AI only after <span class="nowrap">“I agree”</span></h3>
+        <p>Affirmations are written with help from Anthropic's AI. Nothing goes to it until you tap “I agree”, your email and account ID never do, and you can switch it off in Settings.</p>
+      </li>
+      <li>
+        <h3>Never sold. No ads.</h3>
+        <p>No ads, no ad SDKs, and no tracking you across other apps. This website has no trackers either.</p>
+      </li>
+      <li>
+        <h3>Delete it all, anytime</h3>
+        <p>One tap in the app deletes your account and data. No app any more? <a href="./delete-account/">Ask us on the web</a>.</p>
+      </li>
+    </ul>
+    <p><a class="link-arrow" href="./privacy/">Read the privacy policy</a></p>
+  </div>
+</section>
+
+<section id="beta" class="beta" aria-label="Get an invite">
+  <div class="wrap">
+<div class="invite">
+  <div class="invite-seal" aria-hidden="true">
+    <svg viewBox="0 0 100 100" focusable="false"><use href="#mark-petals"></use></svg>
+  </div>
+  <div class="invite-copy">
+    <p class="eyebrow">The beta is invite-only</p>
+    <h2 class="display h2" id="invite-title">You're invited. <em>Almost.</em></h2>
+    <p class="lede">CycleAffirm is in closed testing on Google Play. Tell us the Google account you use on Play and we'll add you to the tester list as spots open.</p>
+    <ul class="invite-facts">
+      <li>Android only, for now</li>
+      <li>18 and over</li>
+      <li>No ads</li>
+    </ul>
+  </div>
+  <form class="invite-form" data-invite data-email="badallalwani@scrolltrace.in" data-subject="CycleAffirm%20beta%20invite" action="mailto:badallalwani@scrolltrace.in" method="get" aria-labelledby="invite-title" novalidate>
+    <label class="field">
+      <span class="field-label">The Gmail you use on Google Play</span>
+      <input type="email" name="gmail" autocomplete="email" inputmode="email" placeholder="you@gmail.com" required>
+    </label>
+    <label class="check">
+      <input type="checkbox" name="adult" required>
+      <span>I'm 18 or over and I have an Android phone</span>
+    </label>
+    <p class="form-error" role="alert" hidden></p>
+    <button class="btn btn-rose btn-lg" type="submit">Request my invite</button>
+    <p class="fine">This opens your email app with everything filled in. Hit send and you're on the list. We only use your email to send your invite. Prefer to write yourself? <a href="mailto:badallalwani@scrolltrace.in?subject=CycleAffirm%20beta%20invite">badallalwani@scrolltrace.in</a></p>
+  </form>
+</div>
+
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a class="brand" href="./" aria-label="CycleAffirm, home">
+        <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#mark-tile"></use></svg>
+        <span class="brand-name">CycleAffirm</span>
+      </a>
+      <p class="footer-tag">Track your cycle. <em>Tune your mind.</em></p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <div>
+        <h2 class="footer-h">The app</h2>
+        <a href="./#how">How it works</a>
+        <a href="./#try">Try a check-in</a>
+        <a href="./#partners">For your person</a>
+        <a href="./beta/">Get an invite</a>
+      </div>
+      <div>
+        <h2 class="footer-h">Help</h2>
+        <a href="./support/">Support</a>
+        <a href="./delete-account/">Delete your data</a>
+        <a href="mailto:badallalwani@scrolltrace.in">Email us</a>
+      </div>
+      <div>
+        <h2 class="footer-h">Legal</h2>
+        <a href="./privacy/">Privacy policy</a>
+      </div>
+    </nav>
+  </div>
+  <div class="wrap footer-fine">
+    <p>CycleAffirm is a wellbeing app, not a medical device. Phase and period predictions are estimates. It isn't birth control or a fertility tool. Talk to a doctor about your health.</p>
+    <p>© 2026 Badal Lalwani · Invite-only beta on Google Play for Android · 18+ · No ads, no trackers, on the app or this site.</p>
+  </div>
+</footer>
+
+</body>
+</html>
