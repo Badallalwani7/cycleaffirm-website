@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://badallalwani7.github.io/cycleaffirm-website/sitemap.xml
+Sitemap: https://cycleaffirm.in/sitemap.xml
