@@ -131,8 +131,11 @@
     e.preventDefault();
     msg.hidden = true;
     submit.disabled = true;
+    const label = submit.textContent;
+    submit.textContent = 'Saving…';
     const r = await window.CycleAffirm.joinWaitlist(form);
     submit.disabled = false;
+    submit.textContent = label;
     if (r.error) {
       msg.textContent = r.error;
       msg.hidden = false;

@@ -179,8 +179,11 @@
       e.preventDefault();
       msg.hidden = true;
       btn.disabled = true;
+      const label = btn.textContent;
+      btn.textContent = 'Saving…';
       const r = await joinWaitlist(form);
       btn.disabled = false;
+      btn.textContent = label;
       if (r.error) {
         msg.textContent = r.error; msg.hidden = false;
         if (r.field) form.elements[r.field]?.focus();
