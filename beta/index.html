@@ -29,8 +29,9 @@
 <link rel="preload" href="../assets/fonts/InstrumentSerif-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/InstrumentSerif-Italic.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../assets/site.css?v=01a12ae09d">
-<script src="../assets/site.js?v=01a12ae09d" defer></script>
+<link rel="stylesheet" href="../assets/site.css?v=47c44f47e7">
+<script src="../assets/site.js?v=47c44f47e7" defer></script>
+
 </head>
 <body class="page-beta" data-tint="neutral">
 <a class="skip" href="#main">Skip to content</a>
@@ -91,10 +92,14 @@
     <div class="card">
       <h2>How it works</h2>
       <ol class="steps-list">
-        <li><div><strong>Request an invite below.</strong> Use the Google account you sign in to Google Play with, since that's the one we add.</div></li>
+        <li><div><strong>Join the beta list below.</strong> Use the Google account you sign in to Google Play with, since that's the one we add.</div></li>
         <li><div><strong>We add you to the testers list</strong> as spots open, and email you a link.</div></li>
         <li><div><strong>Open the link on your Android phone,</strong> tap to join the test, then install CycleAffirm from Google Play like any other app.</div></li>
       </ol>
+    </div>
+    <div class="card">
+      <h2>About your details</h2>
+      <p>When you join the beta list, we keep your first name, your email, and the time you signed up, in a private Google Sheet that only the CycleAffirm team can open. We use them to invite you to the beta and to tell you when CycleAffirm launches. Nothing else: never sold, never used for ads. Want off the list? Email <a href="mailto:badallalwani@scrolltrace.in">badallalwani@scrolltrace.in</a> and we'll delete your details. The bloom quiz on the home page runs only in your browser, so your answers are never sent anywhere.</p>
     </div>
     <div class="two-col">
       <div class="card">
@@ -118,25 +123,34 @@
   <div class="invite-copy">
     <p class="eyebrow">The beta is invite-only</p>
     <h2 class="display h2" id="invite-title">You're invited. <em>Almost.</em></h2>
-    <p class="lede">CycleAffirm is in closed testing on Google Play. Tell us the Google account you use on Play and we'll add you to the tester list as spots open.</p>
+    <p class="lede">CycleAffirm is in closed testing on Google Play. Join the beta list with the Google account you use on Play, and we'll add you as spots open.</p>
     <ul class="invite-facts">
       <li>Android only, for now</li>
       <li>18 and over</li>
       <li>No ads</li>
     </ul>
   </div>
-  <form class="invite-form" data-invite data-email="badallalwani@scrolltrace.in" data-subject="CycleAffirm%20beta%20invite" action="mailto:badallalwani@scrolltrace.in" method="get" aria-labelledby="invite-title" novalidate>
+  <form class="invite-form" data-waitlist data-source="beta" data-endpoint="" data-email="badallalwani@scrolltrace.in" data-subject="CycleAffirm%20beta%20invite" aria-labelledby="invite-title" novalidate>
+    <div class="invite-done" hidden>
+      <p class="display"><span data-done-lead>You're on the list,</span> <em data-done-name>babe.</em></p>
+      <p class="fine" data-done-text>We'll email you when your invite's ready.</p>
+    </div>
+    <label class="field">
+      <span class="field-label">First name</span>
+      <input type="text" name="name" autocomplete="given-name" maxlength="60" placeholder="What should we call you?" required>
+    </label>
     <label class="field">
       <span class="field-label">The Gmail you use on Google Play</span>
-      <input type="email" name="gmail" autocomplete="email" inputmode="email" placeholder="you@gmail.com" required>
+      <input type="email" name="email" autocomplete="email" inputmode="email" maxlength="120" placeholder="you@gmail.com" required>
     </label>
+    <label class="hp" aria-hidden="true">Leave this empty <input name="website" type="text" tabindex="-1" autocomplete="off"></label>
     <label class="check">
       <input type="checkbox" name="adult" required>
       <span>I'm 18 or over and I have an Android phone</span>
     </label>
     <p class="form-error" role="alert" hidden></p>
-    <button class="btn btn-rose btn-lg" type="submit">Request my invite</button>
-    <p class="fine">This opens your email app with everything filled in. Hit send and you're on the list. We only use your email to send your invite. Prefer to write yourself? <a href="mailto:badallalwani@scrolltrace.in?subject=CycleAffirm%20beta%20invite">badallalwani@scrolltrace.in</a></p>
+    <button class="btn btn-rose btn-lg" type="submit">Save my spot</button>
+    <p class="fine">We use your name and email only to invite you to the beta and tell you when CycleAffirm launches. Never sold, no ads. Questions? <a href="mailto:badallalwani@scrolltrace.in?subject=CycleAffirm%20beta%20invite">badallalwani@scrolltrace.in</a></p>
   </form>
 </div>
 

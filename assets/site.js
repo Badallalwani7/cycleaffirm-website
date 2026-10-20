@@ -141,20 +141,59 @@
     next?.addEventListener('click', () => update(pool.length === 0));
   }
 
-  // Invite forms: build the email for her, then open her email app. Nothing is stored here.
-  document.querySelectorAll('form[data-invite]').forEach((form) => {
-    const msg = form.querySelector('.form-error');
-    const say = (text, ok) => { msg.textContent = text; msg.hidden = false; msg.classList.toggle('is-ok', !!ok); };
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const gmail = form.gmail.value.trim();
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(gmail)) { say('Add the email of the Google account you use on Google Play.'); form.gmail.focus(); return; }
-      if (!form.adult.checked) { say('The beta is for people 18 and over with an Android phone.'); form.adult.focus(); return; }
-      const body = "Hi! I'd like to join the CycleAffirm beta.\n\n" +
-        `The Google account I use on Google Play: ${gmail}\n\n` +
-        "I'm 18 or over and I have an Android phone.";
+  // Beta list. With an endpoint (the Google Apps Script in website/waitlist), the name and
+  // email go to the owner's private sheet. Without one, her email app opens with it filled in.
+  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const joinWaitlist = async (form) => {
+    const name = form.elements.name.value.trim();
+    const email = form.elements.email.value.trim();
+    if (!name) return { error: 'Add your first name, so we know what to call you.', field: 'name' };
+    if (!EMAIL_RE.test(email)) return { error: 'Add the email of the Google account you use on Google Play.', field: 'email' };
+    if (!form.elements.adult.checked) return { error: 'The beta is for people 18 and over with an Android phone.', field: 'adult' };
+    const endpoint = form.dataset.endpoint;
+    if (!endpoint) {
+      const body = `Hi! I'd like to join the CycleAffirm beta.\n\nName: ${name}\nThe Google account I use on Google Play: ${email}\n\nI'm 18 or over and I have an Android phone.`;
       window.location.href = `mailto:${form.dataset.email}?subject=${form.dataset.subject}&body=${encodeURIComponent(body)}`;
-      say("Your email app should open now. Hit send and you're on the list.", true);
+      return { ok: true, name, via: 'email' };
+    }
+    try {
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({ name, email, adult: true, source: form.dataset.source || '', website: form.elements.website?.value || '' }),
+      });
+      const out = await res.json();
+      if (out.ok) return { ok: true, name, via: 'list', already: !!out.already };
+      return { error: out.error === 'busy' ? 'Lots of people at once. Try again in a minute?' : 'That didn’t go through. Check your details and try again.' };
+    } catch {
+      return { error: `Couldn’t reach the list. Try again, or email ${form.dataset.email}.` };
+    }
+  };
+  window.CycleAffirm = { joinWaitlist };
+
+  // The invite cards on the home and beta pages (the quiz has its own, in intro.js).
+  document.querySelectorAll('.invite form[data-waitlist]').forEach((form) => {
+    const msg = form.querySelector('.form-error');
+    const btn = form.querySelector('button[type="submit"]');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      msg.hidden = true;
+      btn.disabled = true;
+      const r = await joinWaitlist(form);
+      btn.disabled = false;
+      if (r.error) {
+        msg.textContent = r.error; msg.hidden = false;
+        if (r.field) form.elements[r.field]?.focus();
+        return;
+      }
+      const done = form.querySelector('.invite-done');
+      done.querySelector('[data-done-name]').textContent = `${r.name}.`;
+      done.querySelector('[data-done-lead]').textContent = r.via === 'email' ? 'Almost there,' : 'You’re on the list,';
+      done.querySelector('[data-done-text]').textContent = r.via === 'email'
+        ? 'Your email app should open now. Hit send and you’re on the list.'
+        : (r.already ? 'You were already on it. We’ll email you when your invite’s ready.' : 'We’ll email you when your invite’s ready.');
+      [...form.children].forEach((el) => { if (el !== done) el.hidden = true; });
+      done.hidden = false;
     });
   });
 
